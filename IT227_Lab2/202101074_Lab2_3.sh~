@@ -1,0 +1,10 @@
+#!/bin/bash
+## Jenil_Patel_202101074
+##  Delete empty folders in given path
+
+path_=$1
+if [[ ! $1 ]]; then
+    path_=$(pwd)
+fi
+find ${path_} -type d -empty -delete
+echo -e "\nAll Empty directories inside ${path_} cleared.\n"
