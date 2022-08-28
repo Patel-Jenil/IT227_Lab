@@ -21,8 +21,19 @@ struct program {
 };
 Program *head, *tail;
 
-void programDetails(const Program prog) {
-    printf("\n%d: %s", prog.prog_id, prog.prog_name);
+void programDetails(const Program* prog) {
+    if (!prog)
+        return;
+    printf("\nProgram-ID:%d\tProgram name:%s\n", prog->prog_id, prog->prog_name);
+    printf("UID:%s\tStatus:", prog->uid_executing);
+    if (prog->prog_status == 1) {
+        printf("Submitted.\n");
+    } else if (prog->prog_status == 2) {
+        printf("Running.\n");
+    } else {        
+        printf("Completed.\n");
+    }
+    printf("Start-Time: %lu\tElapsed-Time: %lu\n", prog->start_time, prog->time_elapsed);
 }
 Program* getDetails() {
     Program* prog = (Program *) malloc(sizeof(Program));
@@ -30,8 +41,10 @@ Program* getDetails() {
     prog->prog_id = totalPrograms;
     printf("Enter Program name: ");
     fgets(prog->prog_name, 50 , stdin);
+    prog->prog_name[strcspn(prog->prog_name,"\n")] = '\0';
     printf("Enter uid: ");
-    fgets(prog->prog_name, 25 , stdin);
+    fgets(prog->uid_executing, 25 , stdin);
+    prog->uid_executing[strcspn(prog->uid_executing,"\n")] = '\0';
     prog->start_time = time(NULL);
     prog->prog_status = 1;
     return prog;
@@ -127,40 +140,41 @@ int main() {
     // printf ("%lu\n", (next_time - current_time) );
     // Program *head = malloc(sizeof(Program));
     // printf("%d %s\n",head->prog_id, head->prog_name);
-    char choice;
+    int choice;
     int id;
     while (1) {
         printf("\n==========================================\n");
-        printf("1. Add new program.\n");
+        programDetails(head);
+        printf("\n1. Add new program.\n");
         printf("2. Run a program.\n");
         printf("3. Complete a program.\n");
         printf("4. Update time-elapsed for all programs.\n");
         printf("5. Remove all completed programs.\n");
         printf("0. Exit.\n");
         printf("Choice: ");
-        scanf("%c", &choice);
+        scanf("%d", &choice);
         switch(choice) {
-        case '1':
+        case 1:
             getchar();
             addProgram();
             break;
-        case '2':
+        case 2:
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
             runProgram(id);
             break;
-        case '3':
+        case 3:
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
             completeProgram(id);
             break;
-        case '4':
+        case 4:
             // updateTimeOfProgram(id);
             break;
-        case '5':
+        case 5:
             // removeCompletedPrograms();
             break;
-        case '0':
+        case 0:
             printf("\nAdios Amigo\n\n");
             return 0;
         default:
