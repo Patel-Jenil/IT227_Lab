@@ -93,6 +93,21 @@ void completeProgram(int id) {
     printf("\nInvalid PID.\n");
 }
 
+void deletePrograms(Program* prog) {
+    Program* temp = head;
+    if (prog == head) {
+        if (head == tail) {
+            head = tail = NULL;
+        free(temp);
+        } else {
+            head = head->next;
+            head->prev = NULL;
+        }
+        free(temp);
+    }
+
+}
+
 void freeList() {
     Program*temp = head, *nexttemp = head;
 
@@ -122,20 +137,22 @@ int main() {
         printf("4. Update time-elapsed for all programs.\n");
         printf("5. Remove all completed programs.\n");
         printf("0. Exit.\n");
+        printf("Choice: ");
         scanf("%c", &choice);
         switch(choice) {
         case '1':
+            getchar();
             addProgram();
             break;
         case '2':
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
-            // runProgram(id);
+            runProgram(id);
             break;
         case '3':
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
-            // completeProgram(id);
+            completeProgram(id);
             break;
         case '4':
             // updateTimeOfProgram(id);
@@ -148,7 +165,8 @@ int main() {
             return 0;
         default:
             printf("Invalid choice!\n");
-        } 
+        }
+        getchar();
     }
     freeList();
     return 0;
