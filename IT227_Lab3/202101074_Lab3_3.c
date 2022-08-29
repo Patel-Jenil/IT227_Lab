@@ -209,7 +209,7 @@ void removeAllCompletedPrograms() {
         }
     }
     if (isIT) {
-        printf("\n%d completed program%sremoved.\n", isIT, isIT?" ":"s ");
+        printf("\n%d completed program%sremoved.\n", isIT, isIT==1?" ":"s ");
     } else {
         printf("\nNo completed Programs at the moment.\n");
     }
@@ -275,13 +275,13 @@ int main() {
             removeAllCompletedPrograms();
             break;
         case '0':
-            printf("\nAdios Amigo\n\n");
+            printf("\nAdios Amigo\n");
+            freeList();
             return 0;
         default:
             printf("Invalid choice!\n");
         }
         getchar();
     }
-    freeList();
     return 0;
 }
