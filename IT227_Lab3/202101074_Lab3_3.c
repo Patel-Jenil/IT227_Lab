@@ -227,13 +227,6 @@ void freeList() {
 }
 int main() {
 
-    // __uint64_t current_time = time(NULL);
-    // printf("%lu\n",current_time);
-    // getchar();
-    // __uint64_t next_time = time(NULL);
-    // printf ("%lu\n", (next_time - current_time) );
-    // Program *head = malloc(sizeof(Program));
-    // printf("%d %s\n",head->prog_id, head->prog_name);
     char choice;
     int id;
     while (1) {
