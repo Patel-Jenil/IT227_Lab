@@ -80,6 +80,7 @@ void runProgram(int id) {
             }
             return;
         }
+        prog=prog->next;
     }
     printf("\nInvalid PID.\n");
 }
