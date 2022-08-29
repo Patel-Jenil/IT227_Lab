@@ -71,9 +71,9 @@ void runProgram(int id) {
         printf("\nPrograms List is Empty.\n");
     }
     Program* prog = head;
-    while ( !prog ) {
+    while ( prog ) {
         if (prog->prog_id == id) {
-            if (id == 2) {
+            if (prog->prog_status == 2) {
                 printf("\nProgram { %s } already running.\n", prog->prog_name);
             } else {
                 printf("\nProgram { %s }is now running.\n", prog->prog_name);
@@ -94,14 +94,15 @@ void completeProgram(int id) {
         printf("\nPrograms List is Empty.\n");
     }
     Program* prog = head;
-    while ( !prog ) {
+    while ( prog ) {
         if (prog->prog_id == id) {
-            if (id == 3) {
+            if (prog->prog_status == 3) {
                 printf("\nProgram { %s } already completed.\n", prog->prog_name);
             } else {
                 printf("\nProgram { %s }is now completed.\n", prog->prog_name);
             }
             return;
+            prog = prog->next;
         }
     }
     printf("\nInvalid PID.\n");

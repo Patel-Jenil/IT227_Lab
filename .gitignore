@@ -1,3 +1,7 @@
 *.pdf
 *.exe 
 */*.exe
+tempCodeRunner*
+*.json
+*/*.json
+*/*/*.json
