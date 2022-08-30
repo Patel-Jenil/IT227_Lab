@@ -250,11 +250,13 @@ int main() {
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
             runProgram(id);
+            getchar();
             break;
         case '3':
             printf("Enter I'd of the program: ");
             scanf ("%d",&id);
             completeProgram(id);
+            getchar();
             break;
         case '4':
             if (head==NULL){
@@ -263,16 +265,22 @@ int main() {
                 printf("\n***Updated Elapsed Time for All Programs***\n");
                 updateElapsesTime();
             }
+            getchar();
             break;
         case '5':
             removeAllCompletedPrograms();
+            getchar();
             break;
         case '0':
             printf("\nAdios Amigo\n");
             freeList();
+            getchar();
+            getchar();
             return 0;
         default:
             printf("Invalid choice!\n");
+            getchar();
+
         }
         getchar();
     }
