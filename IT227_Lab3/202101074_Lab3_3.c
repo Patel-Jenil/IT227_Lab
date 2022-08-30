@@ -18,14 +18,14 @@ void runProgram(int );
 void completeProgram(int );
 Program* deleteProgram(Program* );
 void freeList();
-void updateElapsesTime();
+void updateElapsedTime();
 void removeAllCompletedPrograms();
 
 struct program {
     int prog_id;
     char prog_name[50];
     char uid_executing[25];
-    uint64_t start_time;
+    time_t start_time;
     uint64_t time_elapsed;
     int prog_status; // submitted=1 , running=2, finish=3
     Program *next, *prev;
@@ -47,7 +47,7 @@ void programDetails(const Program* prog) {
     printf("  Start-Time: %s",ctime(&(prog->start_time)));
     printf("  Elapsed-Time: ");
     if (prog->time_elapsed > 59) {
-        printf("%lu min %lu sec\n", (unsigned int)prog->time_elapsed/60 , (unsigned) prog->time_elapsed%60 );
+        printf("%lu min %lu sec\n", (unsigned long)prog->time_elapsed/60 , (unsigned long) prog->time_elapsed%60 );
     } else {
         printf("%lu sec\n", prog->time_elapsed);
     }
@@ -60,7 +60,7 @@ void showPrograms() {
         return;
     }
     printf("\nProgram List:\n");
-    updateElapsesTime();
+    updateElapsedTime();
     while (prog) {
         programDetails(prog);
         prog = prog->next;
@@ -127,6 +127,7 @@ void completeProgram(int id) {
         printf("\nInvalid PID.\n");
         return;
     }
+    updateElapsedTime();
     if ( !head ){
         printf("\nPrograms List is Empty.\n");
     }
@@ -183,7 +184,7 @@ Program * deleteProgram(Program* prog) {
     }
 }
 
-void updateElapsesTime() {
+void updateElapsedTime() {
     Program* prog = head;
     if (prog == NULL)
         return;
@@ -266,7 +267,7 @@ int main() {
                 printf("\nNo Programs at the moment.\n");
             } else {
                 printf("\n***Updated Elapsed Time for Running Programs***\n");
-                updateElapsesTime();
+                updateElapsedTime();
             }
             getchar();
             break;
@@ -283,7 +284,6 @@ int main() {
         default:
             printf("Invalid choice!\n");
             getchar();
-
         }
         getchar();
     }
