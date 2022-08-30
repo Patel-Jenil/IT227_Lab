@@ -80,7 +80,7 @@ Program* getDetails() {
     fgets(prog->uid_executing, 25 , stdin);
     prog->uid_executing[strcspn(prog->uid_executing,"\n")] = '\0';
     prog->start_time = time(NULL);
-    prog->time_elapsed = time(NULL);
+    prog->time_elapsed = 0;
     prog->prog_status = 1;
     return prog;
 }
@@ -112,6 +112,7 @@ void runProgram(int id) {
                 printf("\nProgram { %s } is already running.\n", prog->prog_name);
             } else {
                 prog->prog_status=2;
+                prog->start_time = time(NULL);
                 printf("\nProgram { %s } is now running.\n", prog->prog_name);
             }
             return;
@@ -188,7 +189,9 @@ void updateElapsesTime() {
         return;
     uint64_t current_time = time(NULL);
     while (prog) {
-        prog->time_elapsed = current_time - prog->start_time;
+        if (prog->prog_status == 2) {
+            prog->time_elapsed = current_time - prog->start_time;
+        }
         prog = prog->next;
     } 
 }
@@ -236,7 +239,7 @@ int main() {
         printf("\n1. Add new program.\n");
         printf("2. Run a program.\n");
         printf("3. Complete a program.\n");
-        printf("4. Update time-elapsed for all programs.\n");
+        printf("4. Update time-elapsed for running programs.\n");
         printf("5. Remove all completed programs.\n");
         printf("0. Exit.\n");
         printf("Choice: ");
@@ -262,7 +265,7 @@ int main() {
             if (head==NULL){
                 printf("\nNo Programs at the moment.\n");
             } else {
-                printf("\n***Updated Elapsed Time for All Programs***\n");
+                printf("\n***Updated Elapsed Time for Running Programs***\n");
                 updateElapsesTime();
             }
             getchar();
