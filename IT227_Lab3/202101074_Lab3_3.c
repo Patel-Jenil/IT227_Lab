@@ -8,7 +8,7 @@
 // Declaring global variables here...
 int totalPrograms = 0;
 typedef struct program Program;
-
+enum Program_status{submitted=1 , running=2, completed=3};
 // Function Declarations
 void programDetails(const Program*);
 void showPrograms();
@@ -27,7 +27,7 @@ struct program {
     char uid_executing[25];
     time_t start_time;
     uint64_t time_elapsed;
-    int prog_status; // submitted=1 , running=2, finish=3
+    enum Program_status prog_status;
     Program *next, *prev;
 };
 Program *head = NULL, *tail = NULL;
@@ -37,9 +37,9 @@ void programDetails(const Program* prog) {
         return;
     printf("\n* Program-ID:%d\t\tProgram name:%s\n", prog->prog_id, prog->prog_name);
     printf("  User-ID:%s\t\tStatus: ", prog->uid_executing);
-    if (prog->prog_status == 1) {
+    if (prog->prog_status == submitted) {
         printf("Submitted.\n");
-    } else if (prog->prog_status == 2) {
+    } else if (prog->prog_status == running) {
         printf("Running.\n");
     } else {        
         printf("Completed.\n");
@@ -81,7 +81,7 @@ Program* getDetails() {
     prog->uid_executing[strcspn(prog->uid_executing,"\n")] = '\0';
     prog->start_time = time(NULL);
     prog->time_elapsed = 0;
-    prog->prog_status = 1;
+    prog->prog_status = submitted;
     return prog;
 }
 
@@ -108,10 +108,10 @@ void runProgram(int id) {
     Program* prog = head;
     while ( prog ) {
         if (prog->prog_id == id) {
-            if (prog->prog_status == 2) {
+            if (prog->prog_status == running) {
                 printf("\nProgram { %s } is already running.\n", prog->prog_name);
             } else {
-                prog->prog_status=2;
+                prog->prog_status=running;
                 prog->start_time = time(NULL);
                 printf("\nProgram { %s } is now running.\n", prog->prog_name);
             }
@@ -134,10 +134,10 @@ void completeProgram(int id) {
     Program* prog = head;
     while ( prog ) {
         if (prog->prog_id == id) {
-            if (prog->prog_status == 3) {
+            if (prog->prog_status == completed) {
                 printf("\nProgram { %s } is already completed.\n", prog->prog_name);
             } else {
-                prog->prog_status=3;
+                prog->prog_status=completed;
                 printf("\nProgram { %s } is now completed.\n", prog->prog_name);
             }
             return;
@@ -190,7 +190,7 @@ void updateElapsedTime() {
         return;
     uint64_t current_time = time(NULL);
     while (prog) {
-        if (prog->prog_status == 2) {
+        if (prog->prog_status == running) {
             prog->time_elapsed = current_time - prog->start_time;
         }
         prog = prog->next;
@@ -205,7 +205,7 @@ void removeAllCompletedPrograms() {
     Program* temp = head;
     int isIT = 0;
     while (temp) {
-        if (temp->prog_status == 3) {
+        if (temp->prog_status == completed) {
             temp = deleteProgram(temp);
             isIT++;
         } else {
