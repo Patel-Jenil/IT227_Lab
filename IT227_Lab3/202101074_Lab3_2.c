@@ -13,6 +13,7 @@ int main() {
     char input[100];
     printf("\nInput your string: ");
     fgets(input, 100, stdin);
+    input[strcspn(input,"\n")] = '\0';
     int length = recursive_strlen(input);
     printf("\nLength of the string: %d\n", length);
     return 0;
