@@ -1,0 +1,272 @@
+==========================================
+
+No Programs at the moment.
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 1
+Enter Program name: test01
+Enter User-ID: jenil123
+
+Program added.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Submitted.
+  Start-Time: Sun Sep  4 23:49:41 2022
+  Elapsed-Time: 0 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 2
+Enter I'd of the program: 1
+
+Program { test01 } is now running.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Running.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 1 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 4
+
+***Updated Elapsed Time for Running Programs***
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Running.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 7 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 4
+
+***Updated Elapsed Time for Running Programs***
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Running.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 13 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 3
+Enter I'd of the program: 1
+
+Program { test01 } is now completed.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Completed.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 19 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 1
+Enter Program name: test02
+Enter User-ID: jenil123
+
+Program added.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Completed.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 19 sec
+
+* Program-ID:2          Program name:test02
+  User-ID:jenil123              Status: Submitted.
+  Start-Time: Sun Sep  4 23:50:16 2022
+  Elapsed-Time: 0 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 4
+
+***Updated Elapsed Time for Running Programs***
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test01
+  User-ID:jenil123              Status: Completed.
+  Start-Time: Sun Sep  4 23:49:45 2022
+  Elapsed-Time: 19 sec
+
+* Program-ID:2          Program name:test02
+  User-ID:jenil123              Status: Submitted.
+  Start-Time: Sun Sep  4 23:50:16 2022
+  Elapsed-Time: 0 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 5
+
+1 completed program removed.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test02
+  User-ID:jenil123              Status: Submitted.
+  Start-Time: Sun Sep  4 23:50:16 2022
+  Elapsed-Time: 0 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 2
+Enter I'd of the program: 1
+
+Program { test02 } is now running.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test02
+  User-ID:jenil123              Status: Running.
+  Start-Time: Sun Sep  4 23:50:31 2022
+  Elapsed-Time: 1 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 3
+Enter I'd of the program: 1
+
+Program { test02 } is now completed.
+
+
+==========================================
+
+Program List:
+
+* Program-ID:1          Program name:test02
+  User-ID:jenil123              Status: Completed.
+  Start-Time: Sun Sep  4 23:50:31 2022
+  Elapsed-Time: 3 sec
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 5
+
+1 completed program removed.
+
+
+==========================================
+
+No Programs at the moment.
+
+==========================================
+
+1. Add new program.
+2. Run a program.
+3. Complete a program.
+4. Update time-elapsed for running programs.
+5. Remove all completed programs.
+0. Exit.
+Choice: 0
+
+Adios Amigo
+
+***Memory Freed***
