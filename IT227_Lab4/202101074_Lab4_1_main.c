@@ -9,12 +9,14 @@ int main() {
     printf("\nEnter the value of x (degrees) to find sin(x): ");
     scanf("%lf", &x);
     xBackup = x;
+    while(x > 360)
+        x-= 360;
     x = x*((double)PI/180.0);
     for (int i=1, j=1; i<=LIMIT; ++i, j+=2) {
         if (i%2 == 1) {
             sinx += ((double)mypow(x,j)/myfact(j));
         } else {
-            sinx += -((double)mypow(x,j)/myfact(j));
+            sinx -= ((double)mypow(x,j)/myfact(j));
         }
     }
     

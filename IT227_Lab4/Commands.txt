@@ -1,8 +1,21 @@
+### JENIL_PATEL_202101074 ### Just run the "./Commands.txt" to get the executables ###
+# Que 1
 gcc -c *.c
-gcc -o 2021*.o 202101074_Lab4_1
+gcc 2021*.o -o 202101074_Lab4_1
 
+# Que 2
 ar -crs libmyfunc.a *fact.o *pow.o
 ar -t *.a
 gcc -o 202101074_Lab4_2a *main.o lib*
 gcc -o 202101074_Lab4_2b -L . *main.o -lmyfunc
+
+# Que 3
+gcc -fPIC -c *fact.c *pow.c
+gcc -shared -o libmyfunc.so *fact.o *pow.o
+gcc -o 202101074_Lab4_3a *main.o *.so
+gcc -o 202101074_Lab4_3b -L . *main.o -lmyfunc
+chmod u+rwx *
+export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+
+/etc/ld.so.conf.d/
 
