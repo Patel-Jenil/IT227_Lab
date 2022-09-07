@@ -1,0 +1,8 @@
+gcc -c *.c
+gcc -o 2021*.o 202101074_Lab4_1
+
+ar -crs libmyfunc.a *fact.o *pow.o
+ar -t *.a
+gcc -o 202101074_Lab4_2a *main.o lib*
+gcc -o 202101074_Lab4_2b -L . *main.o -lmyfunc
+

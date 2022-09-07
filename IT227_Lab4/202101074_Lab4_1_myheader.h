@@ -1,2 +1,2 @@
-long mypow (long a, long b);
-long myfact (long n);
+double mypow (double a, int b);
+long myfact (int n);

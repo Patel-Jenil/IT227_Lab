@@ -5,19 +5,19 @@
 // PATEL_JENIL_202101074
 
 int main() {
-    float sinx = 0, x , xBackup;
-    printf("Enter the value of x (degrees) to find sin(x)");
-    scanf("%f", &x);
+    double sinx = 0, x , xBackup;
+    printf("\nEnter the value of x (degrees) to find sin(x): ");
+    scanf("%lf", &x);
     xBackup = x;
-    x = x*(PI/180);
-    for (int i=1, j=1; i<=LIMIT; ++i) {
+    x = x*((double)PI/180.0);
+    for (int i=1, j=1; i<=LIMIT; ++i, j+=2) {
         if (i%2 == 1) {
-            sinx += (mypow(x,j)/myfact(j));
+            sinx += ((double)mypow(x,j)/myfact(j));
         } else {
-            sinx += -(mypow(x,j)/myfact(j));
+            sinx += -((double)mypow(x,j)/myfact(j));
         }
     }
     
-    printf("Sin(%0.2f): %f", xBackup, sinx);
+    printf("Sin(%0.2lf): %0.6lf\n\n", xBackup, sinx);
     return 0;
 }
