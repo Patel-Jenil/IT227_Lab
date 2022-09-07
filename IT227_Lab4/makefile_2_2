@@ -6,8 +6,8 @@ OBJ = 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 	
-libmy_static.a: $(OBJ)
+libmystatic.a: $(OBJ)
 	ar rs $@ $^ 
 	
 20210074_Lab4_2b.out: 202101074_Lab4_1_main.o
-	$(CC) -o $^ -L . $@ -lmy_static   
+	$(CC) -o $^ -L . $@ -lmystatic   

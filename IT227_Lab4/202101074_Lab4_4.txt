@@ -1,0 +1,11 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ make -f makefile_1
+gcc -o 202101074_Lab4_1.out 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o 202101074_Lab4_1_main.o -I.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ make -f makefile_2_1
+make: 'libmystatic.a' is up to date.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ make -f makefile_2_2
+make: 'libmystatic.a' is up to date.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ make -f makefile_3_1
+make: 'libmydynamic.so' is up to date.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ make -f makefile_3_2
+make: 'libmydynamic.so' is up to date.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ 

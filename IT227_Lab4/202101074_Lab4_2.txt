@@ -1,0 +1,43 @@
+--> same for both
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -c *.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ar -crs libmystatic.a *fact.o *pow.o
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ar -t *.a
+202101074_Lab4_1_fact.o
+202101074_Lab4_1_pow.o
+
+
+--> Without -l 
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -o 202101074_Lab4_2a.out *main.o *.a
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2a.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2a.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2a.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000
+
+--> With -l
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -o 202101074_Lab4_2b.out -L. *main.o -lmystatic
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2b.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2b.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*2b.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000

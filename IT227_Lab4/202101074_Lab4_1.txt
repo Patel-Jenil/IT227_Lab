@@ -1,0 +1,16 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -c *.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc 2021*.o -o 202101074_Lab4_1.out
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./202101074_Lab4_1.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./202101074_Lab4_1.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./202101074_Lab4_1.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000

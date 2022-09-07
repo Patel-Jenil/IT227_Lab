@@ -1,0 +1,91 @@
+--> Without -l
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -fPIC -c *.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -shared -o libmydynamic.so *fact.o *pow.o
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -o 202101074_Lab4_3a.out *main.o *.so
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3a.out
+./202101074_Lab4_3a.out: error while loading shared libraries: libmydynamic.so: cannot open shared object file: No such file or directory
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3a.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3a.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3a.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000
+
+--> With -l
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -fPIC -c *.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -shared -o libmydynamic.so *fact.o *pow.o
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -o 202101074_Lab4_3b.out -L. *main.o -lmydynamic
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3b.out
+./202101074_Lab4_3b.out: error while loading shared libraries: libmydynamic.so: cannot open shared object file: No such file or directory
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3b.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3b.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*3b.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000
+
+--> using .conf
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -fPIC -c *.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -shared -o libmydynamic.so *fact.o *pow.o
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ gcc -o 202101074_Lab4_3_without_l.out *main.o libmydynamic.so
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*l.out
+./202101074_Lab4_3_without_l.out: error while loading shared libraries: libmydynamic.so: cannot open shared object file: No such file or directory
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ cd /etc/ld.so.conf.d/
+white-wolf@whitewolf-Ubuntu-VB:/etc/ld.so.conf.d$ sudo gedit 202101074_Lab4_3.conf
+[sudo] password for white-wolf: 
+
+(gedit:15828): dconf-WARNING **: 23:52:09.420: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+
+(gedit:15828): dconf-WARNING **: 23:52:09.427: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+
+(gedit:15828): dconf-WARNING **: 23:52:09.589: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+
+(gedit:15828): dconf-WARNING **: 23:52:09.590: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+
+(gedit:15828): dconf-WARNING **: 23:52:09.590: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+
+** (gedit:15828): WARNING **: 23:52:11.354: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:15828): WARNING **: 23:52:11.354: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:15828): WARNING **: 23:52:11.922: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:15828): dconf-WARNING **: 23:52:11.933: failed to commit changes to dconf: Failed to execute child process “dbus-launch” (No such file or directory)
+white-wolf@whitewolf-Ubuntu-VB:/etc/ld.so.conf.d$ sudo ldconfig
+white-wolf@whitewolf-Ubuntu-VB:/etc/ld.so.conf.d$ cd ~/Desktop/*Lab/*4
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*l.out
+
+Enter the value of x (degrees) to find sin(x): 30
+Sin(30.00): 0.500000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*l.out
+
+Enter the value of x (degrees) to find sin(x): 90
+Sin(90.00): 1.000000
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab4$ ./*l.out
+
+Enter the value of x (degrees) to find sin(x): -30
+Sin(-30.00): -0.500000
+

@@ -4,16 +4,16 @@ gcc -c *.c
 gcc 2021*.o -o 202101074_Lab4_1
 
 # Que 2
-ar -crs libmyfunc.a *fact.o *pow.o
+ar -crs libmystatic.a *fact.o *pow.o
 ar -t *.a
-gcc -o 202101074_Lab4_2a *main.o lib*
-gcc -o 202101074_Lab4_2b -L . *main.o -lmyfunc
+gcc -o 202101074_Lab4_2a.out *main.o lib*
+gcc -o 202101074_Lab4_2b.out -L. *main.o -lmystatic
 
 # Que 3
 gcc -fPIC -c *fact.c *pow.c
-gcc -shared -o libmyfunc.so *fact.o *pow.o
-gcc -o 202101074_Lab4_3a *main.o *.so
-gcc -o 202101074_Lab4_3b -L . *main.o -lmyfunc
+gcc -shared -o libmystatic.so *fact.o *pow.o
+gcc -o 202101074_Lab4_3a.out *main.o *.so
+gcc -o 202101074_Lab4_3b.out -L . *main.o -lmystatic
 chmod u+rwx *
 # unset LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
