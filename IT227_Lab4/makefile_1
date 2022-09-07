@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -I.
+DEPS = 202101074_Lab4_1_myheader.h
+OBJ = 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o 202101074_Lab4_1_main.o
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+	
+202101074_Lab4_1.out: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)

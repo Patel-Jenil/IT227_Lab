@@ -15,7 +15,12 @@ gcc -shared -o libmyfunc.so *fact.o *pow.o
 gcc -o 202101074_Lab4_3a *main.o *.so
 gcc -o 202101074_Lab4_3b -L . *main.o -lmyfunc
 chmod u+rwx *
+# unset LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
 
-/etc/ld.so.conf.d/
-
+mypath="$(PWD)"
+cd /etc/ld.so.conf.d/
+sudo gedit 202101074_Lab4_1.conf
+sudo ldconfig
+cd $mypath
+./*.out

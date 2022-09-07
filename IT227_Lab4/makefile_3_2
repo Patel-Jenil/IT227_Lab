@@ -1,0 +1,13 @@
+CC = gcc
+CFLAGS = -I.
+DEPS = 202101177_Lab4_1_myheader.h
+OBJ = 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+	
+lib_dynamic.so: $(OBJ)
+	$(CC) -shared -o $@ $^
+	
+202101074_Lab4_3b.out: 202101074_Lab4_1_main.o
+	$(CC) -o $^ -L. $@ -lmy_dynamic
