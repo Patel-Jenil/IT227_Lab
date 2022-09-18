@@ -10,7 +10,9 @@ int main() {
     scanf("%lf", &x);
     xBackup = x;
     while(x > 360)
-        x-= 360;
+        x -= 360;
+    while(x< -360)
+        x += 360;
     x = x*((double)PI/180.0);
     for (int i=1, j=1; i<=LIMIT; ++i, j+=2) {
         if (i%2 == 1) {

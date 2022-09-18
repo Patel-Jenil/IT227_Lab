@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -I.
 DEPS = 202101074_Lab4_1_myheader.h
-OBJ = 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o
+OBJ = 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o 202101074_Lab4_1_main.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 	
-libmystatic.a: $(OBJ)
-	ar crs $@ $^ $< $(CFLAGS)
-	
+libmystatic.a: 202101074_Lab4_1_fact.o 202101074_Lab4_1_pow.o
+	ar rs $@ $^
+
 202101074_Lab4_2a.out: 202101074_Lab4_1_main.o libmystatic.a
-	$(CC) -o $^ $@ $(CFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS)
