@@ -1,0 +1,15 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ./Q3.out ./temp.txt ./hard ./soft
+Success! Hard Link created.
+Success! Soft Link created.
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ls -ltr
+total 84
+-rw-r--r-- 1 nawal nawal  2805 Mar  6 20:05 202001402_Lab5_1.c
+-rwxr-xr-x 1 nawal nawal 17744 Mar  6 20:06 Q1.out
+-rw-r--r-- 2 nawal nawal    32 Mar  6 20:08 temp.txt
+-rw-r--r-- 2 nawal nawal    32 Mar  6 20:08 hard
+drwxr-xr-x 2 nawal nawal  4096 Mar  6 20:09 temp
+-rw-r--r-- 1 nawal nawal  2166 Mar  6 22:13 202001402_Lab5_2.c
+-rwxr-xr-x 1 nawal nawal 17864 Mar  6 22:13 Q2.out
+-rw-r--r-- 1 nawal nawal   770 Mar  6 22:23 202001402_Lab5_3.c
+-rwxr-xr-x 1 nawal nawal 16760 Mar  6 22:23 Q3.out
+lrwxrwxrwx 1 nawal nawal    10 Mar  6 22:24 soft -> ./temp.txt

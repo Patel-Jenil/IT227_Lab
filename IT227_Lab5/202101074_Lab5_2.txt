@@ -1,0 +1,19 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ./Q2.out
+myshell@@@ARNO$ cat temp.txt
+Hello, this is a text document!
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ls ..
+.
+Lab 6
+Lab 5
+..
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ls .
+.
+temp.txt
+Q2.out
+Q1.out
+Q1.o
+Q3.c
+..
+temp
+Q1.c
+Q2.c

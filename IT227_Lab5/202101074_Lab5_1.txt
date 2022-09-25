@@ -1,0 +1,26 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ./Q1.out q1.txt
+Enter:
+1 - to use cat function.
+2 - to use ls function.
+3 - to use mv function.
+4 - to exit
+1
+Hello, this is a text document!
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab5$ ./Q1.out "/home/nawal/IT215/Lab 5"
+Enter:
+1 - to use cat function.
+2 - to use ls function.
+3 - to use mv function.
+4 - to exit
+2
+.
+Q1.out
+Q1.o
+Q3.c
+..
+temp
+q1.txt
+Q1.c
+Q2.c
+
