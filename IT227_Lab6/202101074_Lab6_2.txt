@@ -1,85 +1,49 @@
-[student@localhost Downloads]$ ls 
-'06A Systems Programming-Process.pdf'
- 201901078_201901145
- 202101149_Lab6_1_expo_child.c
- 202101149_Lab6_1_expo_child.o
- 202101149_Lab6_1_expo_child.out
- 202101149_Lab6_1_expo_parent.c
- 202101149_Lab6_2_expo_parent.c
- 202101149_Lab6_2_expo_parent.o
- 202101149_Lab6_2_expo_parent.out
-'Lab – 1.1_Student_Result_Mangement_S4_G1_G4.pdf'
- lab_6_1.c
- lab_6_1_parent.c
- ProcessManagement
- ProcessManagement.zip
-'Screenshot-2022-9-26 fork() in C - GeeksforGeeks.png'
-'Systems Programming - Lab2.pdf'
-'Systems Programming - Lab6(1).pdf'
-'Systems Programming - Lab6.pdf'
-[student@localhost Downloads]$ gcc -c 202101149_Lab6_1_expo_parent.c 
-[student@localhost Downloads]$ gcc -o 202101149_Lab6_1_expo_parent.out 202101149_Lab6_1_expo_parent.o
-[student@localhost Downloads]$ ./202101149_Lab6_1_expo_parent.out .5 5
-Given x for finding e^x is .5 and n is 5 
-child(PID=5033) : For X = 0.500000 the first 5 terms yield 1.648698
-Child with PID= 5033 finished
-child with PID 5033 terminated normally
-child with PID 5033 exited with exit code 1
-parent 5032 : done
-[student@localhost Downloads]$ ./202101149_Lab6_1_expo_parent.out 3 2
-Given x for finding e^x is 3 and n is 2 
-child(PID=5041) : For X = 3.000000 the first 2 terms yield 8.500000
-Child with PID= 5041 finished
-child with PID 5041 terminated normally
-child with PID 5041 exited with exit code 8
-parent 5040 : done
-[student@localhost Downloads]$ clear
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ gcc 202101074_Lab6_1_expo_child.c -o 202101074_Lab6_1_expo_child.out
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ gcc 202101074_Lab6_2_expo_parent.c -o 202101074_Lab6_2_expo_parent.out
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ ./*2_expo_parent.out 0.1 7
 
-[student@localhost Downloads]$ ls
-'06A Systems Programming-Process.pdf'   202101149_Lab6_1_expo_parent.out                   lab_6_1_parent.c
- 201901078_201901145                    202101149_lab6_1.txt                               ProcessManagement
- 202101149_Lab6_1_expo_child.c          202101149_Lab6_2_expo_parent.c                     ProcessManagement.zip
- 202101149_Lab6_1_expo_child.o          202101149_Lab6_2_expo_parent.o                    'Screenshot-2022-9-26 fork() in C - GeeksforGeeks.png'
- 202101149_Lab6_1_expo_child.out        202101149_Lab6_2_expo_parent.out                  'Systems Programming - Lab2.pdf'
- 202101149_Lab6_1_expo_parent.c        'Lab – 1.1_Student_Result_Mangement_S4_G1_G4.pdf'  'Systems Programming - Lab6(1).pdf'
- 202101149_Lab6_1_expo_parent.o         lab_6_1.c                                         'Systems Programming - Lab6.pdf'
-[student@localhost Downloads]$ ./202101149_Lab6_2_expo_parent.out 3 2 0.5 5
-Given x for finding e^x is 3 and n is 2 
-child(PID=5093) : For X = 3.000000 the first 2 terms yield 8.500000
-32764Child with PID= 5093 finished
-child with PID 5093 terminated normally
-child with PID 5093 exited with exit code 8
-parent 5092 : done
-Given x for finding e^x is 3 and n is 2 
-child(PID=5094) : For X = 0.500000 the first 5 terms yield 1.648698
-2048Child with PID= 5094 finished
-child with PID 5094 terminated normally
-child with PID 5094 exited with exit code 1
-parent 5092 : done
-[student@localhost Downloads]$ ./202101149_Lab6_2_expo_parent.out 3 2 0.5 5 0.2 3 0.7 6
-Given x for finding e^x is 3 and n is 2 
-child(PID=5111) : For X = 3.000000 the first 2 terms yield 8.500000
-32767Child with PID= 5111 finished
-child with PID 5111 terminated normally
-child with PID 5111 exited with exit code 8
-parent 5110 : done
-Given x for finding e^x is 3 and n is 2 
-child(PID=5112) : For X = 0.500000 the first 5 terms yield 1.648698
-2048Child with PID= 5112 finished
-child with PID 5112 terminated normally
-child with PID 5112 exited with exit code 1
-parent 5110 : done
-Given x for finding e^x is 3 and n is 2 
-child(PID=5113) : For X = 0.200000 the first 3 terms yield 1.221333
-256Child with PID= 5113 finished
-child with PID 5113 terminated normally
-child with PID 5113 exited with exit code 1
-parent 5110 : done
-Given x for finding e^x is 3 and n is 2 
-child(PID=5114) : For X = 0.700000 the first 6 terms yield 2.013735
-256Child with PID= 5114 finished
-child with PID 5114 terminated normally
-child with PID 5114 exited with exit code 2
-parent 5110 : done
-[student@localhost Downloads]$ 
+Child(PID=14186) : e^(0.100000) upto 7 terms = 1.105171
+Parent 14185 : done
+Child with PID= 14186 finished
+Child with PID 14186 terminated normally
+Child with PID 14186 exited with exit code 1
 
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ ./*2_expo_parent.out 0.1 7 0.5 9
+
+Child(PID=14188) : e^(0.100000) upto 7 terms = 1.105171
+Parent 14187 : done
+Child with PID= 14188 finished
+Child with PID 14188 terminated normally
+Child with PID 14188 exited with exit code 1
+
+Child(PID=14189) : e^(0.500000) upto 9 terms = 1.648721
+Parent 14187 : done
+Child with PID= 14189 finished
+Child with PID 14189 terminated normally
+Child with PID 14189 exited with exit code 1
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ ./*2_expo_parent.out 0.1 7 0.5 9 0.4 3
+
+Child(PID=14191) : e^(0.100000) upto 7 terms = 1.105171
+Parent 14190 : done
+Child with PID= 14191 finished
+Child with PID 14191 terminated normally
+Child with PID 14191 exited with exit code 1
+
+Child(PID=14192) : e^(0.500000) upto 9 terms = 1.648721
+Parent 14190 : done
+Child with PID= 14192 finished
+Child with PID 14192 terminated normally
+Child with PID 14192 exited with exit code 1
+
+Child(PID=14193) : e^(0.400000) upto 3 terms = 1.490667
+Parent 14190 : done
+Child with PID= 14193 finished
+Child with PID 14193 terminated normally
+Child with PID 14193 exited with exit code 1
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ ./*2_expo_parent.out 0.1 7 0.5 9 0.4 3 7
+
+USAGE: parent_process.out <num1> <num2> ...
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab6$ 

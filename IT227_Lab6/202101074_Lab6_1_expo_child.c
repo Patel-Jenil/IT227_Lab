@@ -19,7 +19,7 @@ double main(int argc, char *argv[]) {
     int n;
     x = atof(argv[1]);
     n = atoi(argv[2]);
-    p = exponential(x, n);
-    printf("Child(PID=%d) : e^(%lf) upto %d terms = %lf\n", getpid(), x, n, p);
+    p = expo(x, n);
+    printf("\nChild(PID=%d) : e^(%lf) upto %d terms = %lf\n", getpid(), x, n, p);
     exit(p);
 }
