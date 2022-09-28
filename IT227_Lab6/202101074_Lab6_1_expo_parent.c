@@ -15,21 +15,16 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Could not execute %s \n", argv[1]);
     } else {
         childPID = wait(&status);
+        printf("Parent %d : done\n", getpid());
         printf("Child with PID= %d finished\n", childPID);
 
-        if WIFEXITED (status)
-        {
+        if WIFEXITED (status) {
             printf("Child with PID %d terminated normally\n", childPID);
             printf("Child with PID %d exited with exit code %d\n", childPID, WEXITSTATUS(status));
-        }
-
-        else if WIFSIGNALED (status)
+        } else if WIFSIGNALED (status) {
             printf("Child with PID %d was terminated by signal %d\n", childPID, WTERMSIG(status));
-
-        else
+        } else
             printf("Child with PID %d had abnormal termination\n", childPID);
-
-        printf("Parent %d : done\n", getpid());
     }
     return 0;
 }
