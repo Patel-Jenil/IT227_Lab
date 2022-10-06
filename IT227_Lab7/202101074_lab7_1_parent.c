@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 		close(fd[0]);
 		dup2(fd[1], 1);
 		close(fd[1]);
-		execl("./202101149_Lab7_1_child.out", "./202101149_Lab7_1_child.out", argv[1], argv[2], NULL);
+		execl("./202101074_Lab7_1_child.out", "./202101074_Lab7_1_child.out", argv[1], argv[2], NULL);
 	}
 	return 0;
 }

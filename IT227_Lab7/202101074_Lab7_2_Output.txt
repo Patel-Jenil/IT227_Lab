@@ -14,5 +14,5 @@ quetion in child : what is your area of interest?
 answer in parent : Embedded Systems
 
 Enter the question no. : 0
-quetion in child : quit
-answer in parent : quit
+quetion in child : Quit
+answer in parent : Quit

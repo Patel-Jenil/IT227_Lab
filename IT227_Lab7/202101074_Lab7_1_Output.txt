@@ -7,5 +7,3 @@ white-wolf@whitewolf-Ubuntu-VB:~$  ./202101074_Lab7_1_parent.out test_output.txt
 white-wolf@whitewolf-Ubuntu-VB:~$  ./202101074_Lab7_1_parent.out test_output.txt 5
 5th line
 white-wolf@whitewolf-Ubuntu-VB:~$ 
-
- 
