@@ -1,0 +1,11 @@
+white-wolf@whitewolf-Ubuntu-VB:~$  gcc -o 202101074_Lab7_1_child.out 202101074_Lab7_1_child.c
+white-wolf@whitewolf-Ubuntu-VB:~$  gcc -o 202101074_Lab7_1_parent.out 202101074_Lab7_1_parent.c
+white-wolf@whitewolf-Ubuntu-VB:~$  ./202101074_Lab7_1_parent.out test_output.txt 4
+4th line
+white-wolf@whitewolf-Ubuntu-VB:~$  ./202101074_Lab7_1_parent.out test_output.txt 2
+2nd line
+white-wolf@whitewolf-Ubuntu-VB:~$  ./202101074_Lab7_1_parent.out test_output.txt 5
+5th line
+white-wolf@whitewolf-Ubuntu-VB:~$ 
+
+ 

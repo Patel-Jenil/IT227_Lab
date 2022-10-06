@@ -1,0 +1,18 @@
+white-wolf@whitewolf-Ubuntu-VB:~$ gcc -o 202101074_Lab7_2.out 202101074_Lab7_2.c
+white-wolf@whitewolf-Ubuntu-VB:~$ ./202101074_Lab7_2.out
+
+Enter the question no. : 1
+quetion in child : You study in which university?
+answer in parent : DAIICT
+
+Enter the question no. : 2
+quetion in child : which course are you studying?
+answer in parent : Systems Programming
+
+Enter the question no. : 3
+quetion in child : what is your area of interest?
+answer in parent : Embedded Systems
+
+Enter the question no. : 0
+quetion in child : quit
+answer in parent : quit
