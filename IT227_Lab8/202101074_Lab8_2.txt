@@ -1,0 +1,23 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab8$ gcc -o 202101074_Lab8_2_parent+child.out  202101074_Lab8_2_parent+child.c 
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab8$ ./202101074_Lab8_2_parent+child.out 
+Enter the question number: 1
+Question in child : You study in which university?
+Answer in Parent : DAIICT
+Enter the question number: 2       
+Question in child : which course are you studying?
+Answer in Parent : Systems Programming
+Enter the question number: 3
+Question in child : what is your area of interest?
+Answer in Parent : Embedded Systems
+Enter the question number: 0
+Question in child : quit
+Answer in Parent : quit
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab8$ ./202101074_Lab8_2_parent+child.out 
+Enter the question number: 4
+Question in child : Invalid question number
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab8$ ./202101074_Lab8_2_parent+child.out 
+Enter the question number: 9
+Question in child : Invalid question number
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab8$
+
+
