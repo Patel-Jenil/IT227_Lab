@@ -1,0 +1,68 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ gcc -o 202101074_Lab9_2.out 202101074_Lab9_2.c
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 1
+No. of ROWS are : 5000
+No. of COLUMS are : 10000
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 187797
+
+Ans by SERIAL : 0
+Time for SERIAL : 118222
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 5
+No. of ROWS are : 5000
+No. of COLUMS are : 10000
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 74814
+
+Ans by SERIAL : 0
+Time for SERIAL : 118515
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 10
+No. of ROWS are : 5000
+No. of COLUMS are : 10000
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 76708
+
+Ans by SERIAL : 0
+Time for SERIAL : 118443
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 20
+No. of ROWS are : 5000
+No. of COLUMS are : 10000
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 94353
+
+Ans by SERIAL : 0
+Time for SERIAL : 141145
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ gcc -o 202101074_Lab9_2.out 202101074_Lab9_2.c -lpthread
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 4
+No. of ROWS are : 500
+No. of COLUMS are : 100
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 1635
+
+Ans by SERIAL : 0
+Time for SERIAL : 265
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ gcc -o 202101074_Lab9_2.out 202101074_Lab9_2.c -lpthread
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab9$ ./202101074_Lab9_2.out
+Enter no. of THREADS : 4
+No. of ROWS are : 50000
+No. of COLUMS are : 10000
+
+Ans by PARALLEL : 0
+Time for PARALLEL : 427140
+
+Ans by SERIAL : 0
+Time for SERIAL : 1077834
