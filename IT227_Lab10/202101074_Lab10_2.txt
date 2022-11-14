@@ -1,0 +1,24 @@
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab10$ gcc -o 202101074_Lab10_2.out 202101074_Lab10_2.c -lpthread
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab10$ ./202101074_Lab10_2.out 
+processID  page_number  frequency
+5 979 1
+5 843 2
+6 542 3
+1 412 1
+3 109 1
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab10$ ./202101074_Lab10_2.out 
+processID  page_number  frequency
+7 185 1
+5 843 2
+6 542 2
+1 412 1
+3 109 1
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab10$ ./202101074_Lab10_2.out 
+processID  page_number  frequency
+5 979 1
+5 843 2
+6 542 3
+1 412 1
+3 109 1
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab10$ 
+
