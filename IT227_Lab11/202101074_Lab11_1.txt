@@ -1,0 +1,21 @@
+[Client]
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab11$ gcc 202101074_Lab11_1_ftp_client.c -o .202101074_Lab11_1_ftp_client.out
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab11$ ./202101074_Lab11_1_ftp_client.out 0.0.0.0 1080
+Host:0.0.0.0, Service:1080
+Connected to server 0.0.0.0 at port 1080
+Enter file name: test.txt
+Testing the client server connection!
+Test Successful.
+
+[Server]
+
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab11$ gcc 202101074_Lab11_1_ftp_server.c -o 202101074_Lab11_1_ftp_server.out
+white-wolf@whitewolf-Ubuntu-VB:~/Desktop/IT227_Lab/IT227_Lab11$ ./202101074_Lab11_1_ftp_server.out 1080
+Host:0.0.0.0, Service:1080
+Waiting to connect with a new client
+Connected to (localhost, 17469)
+Communication started
+test.txt
+Communication ended
+Waiting to connect with a new client
